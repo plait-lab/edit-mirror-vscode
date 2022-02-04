@@ -1,7 +1,7 @@
 {
-  "name": "edit-mirror",
+	"name": "edit-mirror",
 	"displayName": "Edit Mirror",
-	"description": "Edit Mirror VS Code language client",
+	"description": "Edit Mirror language client",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.64.0"
@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:edit-mirror.helloWorld"
+		"onCommand:edit-mirror.helloWorld"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
