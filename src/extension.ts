@@ -3,7 +3,7 @@ import * as lc from "vscode-languageclient/node";
 
 let client: lc.LanguageClient;
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(_context: vscode.ExtensionContext) {
 	const serverOptions: lc.ServerOptions = {
 		"command": "edit-mirror",
 		"args": ["language-server"]
