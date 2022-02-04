@@ -5,6 +5,7 @@
 	"version": "0.0.1",
 	"author": "Justin Lubin",
 	"publisher": "plait-lab",
+  "repository": "https://github.com/plait-lab/edit-mirror-vscode",
 	"engines": {
 		"vscode": "^1.64.0"
 	},
