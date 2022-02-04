@@ -1,13 +1,31 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
+import * as lc from "vscode-languageclient/node";
+
+let client: lc.LanguageClient;
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "edit-mirror" is now active!');
+	const serverOptions: lc.ServerOptions = {
+		"command": "edit-mirror",
+		"args": ["language-server"]
+	};
 
-	let disposable = vscode.commands.registerCommand('edit-mirror.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from Edit Mirror!');
-	});
+	const clientOptions: lc.LanguageClientOptions = {
+		"documentSelector": [{ "language": "elm" }]
+	};
 
-	context.subscriptions.push(disposable);
+	client = new lc.LanguageClient(
+		"edit-mirror",
+		"Edit Mirror",
+		serverOptions,
+		clientOptions
+	);
+
+	client.start();
 }
 
-export function deactivate() { }
+export function deactivate() {
+	if (!client) {
+		return;
+	}
+	return client.stop();
+}
