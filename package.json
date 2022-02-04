@@ -2,10 +2,11 @@
 	"name": "edit-mirror",
 	"displayName": "Edit Mirror",
 	"description": "Edit Mirror language client",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Justin Lubin",
 	"publisher": "plait-lab",
   "repository": "https://github.com/plait-lab/edit-mirror-vscode",
+  "qna": false,
 	"engines": {
 		"vscode": "^1.64.0"
 	},
